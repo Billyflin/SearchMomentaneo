@@ -1,0 +1,50 @@
+JFDML JFormDesigner: "7.0.4.0.360" Java: "11.0.13" encoding: "UTF-8"
+
+new FormModel {
+	contentType: "form/swing"
+	root: new FormRoot {
+		add( new FormWindow( "javax.swing.JFrame", new FormLayoutManager( class java.awt.BorderLayout ) ) {
+			name: "this"
+			"iconImage": new com.jformdesigner.model.SwingIcon( 0, "/doctor.png" )
+			"title": "Register"
+			add( new FormContainer( "javax.swing.JPanel", new FormLayoutManager( class java.awt.BorderLayout ) ) {
+				name: "dialogPane"
+				"border": new javax.swing.border.EmptyBorder( 12, 12, 12, 12 )
+				add( new FormContainer( "javax.swing.JPanel", new FormLayoutManager( class org.jdesktop.layout.GroupLayout ) {
+					"$horizontalGroup": "par l {seq l {space :p:18:p, par l:::p {comp label2::::63:x, comp label1::::63:x}, par l {seq {space :p:9:p, comp button1::::108:x}, seq {space u:::p, par l {comp textField1::::105:x, comp textField2::::105:x}}}, space :::p}, seq l {space :p:37:p, comp label3:::p:118:p, space ::49:x}}"
+					"$verticalGroup": "par l {seq l {space :p:27:p, par b {comp label1::b:p::p, comp textField1::b:p::p}, space s:::p, par b {comp label2::b:p::p, comp textField2::b:p::p}, space :::p, comp label3:::p::p, space :::x, comp button1:::p::p, space :::p}}"
+				} ) {
+					name: "contentPanel"
+					add( new FormComponent( "javax.swing.JTextField" ) {
+						name: "textField1"
+					} )
+					add( new FormComponent( "javax.swing.JLabel" ) {
+						name: "label1"
+						"text": "Rut"
+					} )
+					add( new FormComponent( "javax.swing.JLabel" ) {
+						name: "label2"
+						"text": "Contraseña"
+					} )
+					add( new FormComponent( "javax.swing.JButton" ) {
+						name: "button1"
+						"text": "Registrarse"
+					} )
+					add( new FormComponent( "javax.swing.JLabel" ) {
+						name: "label3"
+					} )
+					add( new FormComponent( "javax.swing.JPasswordField" ) {
+						name: "textField2"
+					} )
+				}, new FormLayoutConstraints( class java.lang.String ) {
+					"value": "Center"
+				} )
+			}, new FormLayoutConstraints( class java.lang.String ) {
+				"value": "Center"
+			} )
+		}, new FormLayoutConstraints( null ) {
+			"location": new java.awt.Point( 0, 0 )
+			"size": new java.awt.Dimension( 230, 205 )
+		} )
+	}
+}

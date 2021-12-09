@@ -1,0 +1,194 @@
+JFDML JFormDesigner: "7.0.4.0.360" Java: "11.0.13" encoding: "UTF-8"
+
+new FormModel {
+	contentType: "form/swing"
+	root: new FormRoot {
+		add( new FormWindow( "javax.swing.JFrame", new FormLayoutManager( class java.awt.BorderLayout ) ) {
+			name: "this"
+			"iconImage": new com.jformdesigner.model.SwingIcon( 0, "/doctor.png" )
+			add( new FormContainer( "javax.swing.JPanel", new FormLayoutManager( class java.awt.BorderLayout ) ) {
+				name: "dialogPane"
+				"border": new javax.swing.border.EmptyBorder( 12, 12, 12, 12 )
+				add( new FormContainer( "javax.swing.JPanel", new FormLayoutManager( class org.jdesktop.layout.GroupLayout ) {
+					"$horizontalGroup": "par l {comp tabbedPane1::l::614:x}"
+					"$verticalGroup": "par l {comp tabbedPane1::l::409:x}"
+				} ) {
+					name: "contentPanel"
+					add( new FormContainer( "javax.swing.JTabbedPane", new FormLayoutManager( class javax.swing.JTabbedPane ) ) {
+						name: "tabbedPane1"
+						add( new FormContainer( "javax.swing.JPanel", new FormLayoutManager( class org.jdesktop.layout.GroupLayout ) {
+							"$horizontalGroup": "par l {comp panel5:::::x, seq t {space ::440:x, comp xDatePicker1:::p:119:p, space :p:50:p}}"
+							"$verticalGroup": "par l {seq t {space :p:40:p, comp xDatePicker1:::p:18:p, space ::56:x, comp panel5:::p::p}}"
+						} ) {
+							name: "panel2"
+							add( new FormContainer( "javax.swing.JPanel", new FormLayoutManager( class org.jdesktop.layout.GroupLayout ) {
+								"$horizontalGroup": "par l {comp scrollPane2::l::609:x}"
+								"$verticalGroup": "par l {comp scrollPane2::l::267:x}"
+							} ) {
+								name: "panel5"
+								add( new FormContainer( "javax.swing.JScrollPane", new FormLayoutManager( class javax.swing.JScrollPane ) ) {
+									name: "scrollPane2"
+									add( new FormComponent( "javax.swing.JTable" ) {
+										name: "table1"
+									} )
+								} )
+							} )
+							add( new FormComponent( "org.jdesktop.swingx.JXDatePicker" ) {
+								name: "xDatePicker1"
+							} )
+						}, new FormLayoutConstraints( null ) {
+							"title": "Agendar Hora"
+						} )
+						add( new FormContainer( "javax.swing.JPanel", new FormLayoutManager( class org.jdesktop.layout.GroupLayout ) {
+							"$horizontalGroup": "par l {seq t {space :p:23:p, comp label4:::p:92:p, space :p:35:p, comp comboBox1:::p:90:p, space s:::p, comp label5:::p:52:p, space :::p, comp textField1:::p:109:p, space ::63:x, par l {comp checkBox2:::p::p, comp checkBox1:::p::p}, space :p:62:p}, comp panel4::l:::x}"
+							"$verticalGroup": "par l {seq t {space :p:38:p, par b {comp checkBox1::b:p::p, comp comboBox1::b:p::p, comp label4::b:p::p, comp textField1::b:p::p, comp label5::b:p::p}, space :::p, comp checkBox2:::p::p, space ::32:x, comp panel4:::p::p}}"
+						} ) {
+							name: "panel3"
+							add( new FormContainer( "javax.swing.JPanel", new FormLayoutManager( class org.jdesktop.layout.GroupLayout ) {
+								"$horizontalGroup": "par l {comp scrollPane1::t::609:x}"
+								"$verticalGroup": "par l {comp scrollPane1::t::265:x}"
+							} ) {
+								name: "panel4"
+								add( new FormContainer( "javax.swing.JScrollPane", new FormLayoutManager( class javax.swing.JScrollPane ) ) {
+									name: "scrollPane1"
+									add( new FormComponent( "javax.swing.JList" ) {
+										name: "list1"
+									} )
+								} )
+							} )
+							add( new FormComponent( "javax.swing.JCheckBox" ) {
+								name: "checkBox1"
+								"text": "Fonasa"
+							} )
+							add( new FormComponent( "javax.swing.JCheckBox" ) {
+								name: "checkBox2"
+								"text": "Isapre"
+							} )
+							add( new FormComponent( "javax.swing.JComboBox" ) {
+								name: "comboBox1"
+							} )
+							add( new FormComponent( "javax.swing.JLabel" ) {
+								name: "label4"
+								"text": "Especialidad"
+							} )
+							add( new FormComponent( "javax.swing.JTextField" ) {
+								name: "textField1"
+							} )
+							add( new FormComponent( "javax.swing.JLabel" ) {
+								name: "label5"
+								"text": "Buscar ID"
+							} )
+						}, new FormLayoutConstraints( null ) {
+							"title": "Ver Especialistas"
+						} )
+						add( new FormContainer( "javax.swing.JPanel", new FormLayoutManager( class org.jdesktop.layout.GroupLayout ) {
+							"$horizontalGroup": "par l {seq t {comp xMonthView1:::p::p, space ::122:x, par l:::p {comp scrollPane3::::249:x, comp scrollPane4::::249:x}}}"
+							"$verticalGroup": "par l {seq {comp xMonthView1:::p::p, space :0:221:x}, seq {comp scrollPane3:::p:112:p, space :p:29:p, comp scrollPane4::::240:x}}"
+						} ) {
+							name: "panel6"
+							add( new FormContainer( "javax.swing.JScrollPane", new FormLayoutManager( class javax.swing.JScrollPane ) ) {
+								name: "scrollPane3"
+								add( new FormComponent( "org.jdesktop.swingx.JXImageView" ) {
+									name: "xImageView1"
+								} )
+							} )
+							add( new FormComponent( "org.jdesktop.swingx.JXMonthView" ) {
+								name: "xMonthView1"
+							} )
+							add( new FormContainer( "javax.swing.JScrollPane", new FormLayoutManager( class javax.swing.JScrollPane ) ) {
+								name: "scrollPane4"
+								add( new FormComponent( "org.jdesktop.swingx.JXImagePanel" ) {
+									name: "xImagePanel1"
+								} )
+							} )
+						}, new FormLayoutConstraints( null ) {
+							"title": "Pruebas swingX"
+						} )
+						add( new FormContainer( "javax.swing.JPanel", new FormLayoutManager( class org.jdesktop.layout.GroupLayout ) {
+							"$horizontalGroup": "par l {seq t {comp panel8:::p::p, space :::x, par l {comp panel7:::p::p, comp xMonthView2:::p::p}, space :::p}}"
+							"$verticalGroup": "par l {seq {comp panel7:::p::p, space :::p, comp xMonthView2:::p::p, space :0:35:x}, comp panel8::l:::x}"
+						} ) {
+							name: "panel1"
+							add( new FormContainer( "javax.swing.JPanel", new FormLayoutManager( class org.jdesktop.layout.GroupLayout ) {
+								"$horizontalGroup": "par l {seq {space :p:79:p, comp label8:::p::p, space ::83:x}, seq t {space :0:104:x, comp scrollPane5:::p:134:p}}"
+								"$verticalGroup": "par l {seq t {comp scrollPane5:::p:89:p, space ::71:x, comp label8:::p::p, space :::p}}"
+							} ) {
+								name: "panel7"
+								add( new FormComponent( "javax.swing.JLabel" ) {
+									name: "label8"
+									"text": "Dias agendados"
+								} )
+								add( new FormContainer( "javax.swing.JScrollPane", new FormLayoutManager( class javax.swing.JScrollPane ) ) {
+									name: "scrollPane5"
+									add( new FormComponent( "org.jdesktop.swingx.JXImagePanel" ) {
+										name: "xImagePanel2"
+									} )
+								} )
+							} )
+							add( new FormContainer( "javax.swing.JPanel", new FormLayoutManager( class org.jdesktop.layout.GroupLayout ) {
+								"$horizontalGroup": "par l {seq l {space :p:22:p, par t:::p {comp label3::l:::x, comp label2::l:::x, comp label1:::::x, comp label6:::::x, comp checkBox3:::::x, comp checkBox4:::p:97:p}, space ::245:x}}"
+								"$verticalGroup": "par l {seq l {space :p:32:p, comp label1:::p::p, space :p:33:p, comp label2:::p::p, space s:::p, comp label3:::p::p, space s:::p, comp label6:::p::p, space s:::p, comp checkBox3:::p::p, space :p:28:p, comp checkBox4:::p::p, space ::132:x}}"
+							} ) {
+								name: "panel8"
+								add( new FormComponent( "javax.swing.JLabel" ) {
+									name: "label1"
+									"text": "Nombre:"
+								} )
+								add( new FormComponent( "javax.swing.JLabel" ) {
+									name: "label2"
+									"text": "Apellido:"
+								} )
+								add( new FormComponent( "javax.swing.JLabel" ) {
+									name: "label3"
+									"text": "Rut:"
+								} )
+								add( new FormComponent( "javax.swing.JLabel" ) {
+									name: "label6"
+									"text": "Fecha de Creación:"
+								} )
+								add( new FormComponent( "javax.swing.JCheckBox" ) {
+									name: "checkBox3"
+									"text": "Isapre"
+								} )
+								add( new FormComponent( "javax.swing.JCheckBox" ) {
+									name: "checkBox4"
+									"text": "Fonasa"
+								} )
+							} )
+							add( new FormComponent( "org.jdesktop.swingx.JXMonthView" ) {
+								name: "xMonthView2"
+							} )
+						}, new FormLayoutConstraints( null ) {
+							"title": "Perfil"
+						} )
+					} )
+				}, new FormLayoutConstraints( class java.lang.String ) {
+					"value": "Center"
+				} )
+				add( new FormContainer( "javax.swing.JPanel", new FormLayoutManager( class java.awt.GridBagLayout ) {
+					"$columnSpecs": "0:1.0, 80"
+					"$rowSpecs": "0"
+					"$hGap": 5
+					"$vGap": 5
+				} ) {
+					name: "buttonBar"
+					"border": new javax.swing.border.EmptyBorder( 12, 0, 0, 0 )
+					add( new FormComponent( "javax.swing.JButton" ) {
+						name: "okButton"
+						"text": "OK"
+					}, new FormLayoutConstraints( class com.jformdesigner.runtime.GridBagConstraintsEx ) {
+						"gridx": 1
+						"gridy": 0
+					} )
+				}, new FormLayoutConstraints( class java.lang.String ) {
+					"value": "South"
+				} )
+			}, new FormLayoutConstraints( class java.lang.String ) {
+				"value": "Center"
+			} )
+		}, new FormLayoutConstraints( null ) {
+			"location": new java.awt.Point( 0, 0 )
+			"size": new java.awt.Dimension( 640, 500 )
+		} )
+	}
+}
