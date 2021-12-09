@@ -2,8 +2,8 @@ package Data;
 
 import java.sql.*;
 
-public class ConexionLogin {
-    private static final String DB_URL = "jdbc:mysql://181.226.106.16:3306/LOGIN";
+public class ConexionAPP {
+    private static final String DB_URL = "jdbc:mysql://181.226.107.26:3306/DrSearch";
     private static final String USER = "billy";
     private static final String PASS = "0208";
     private String sql;
@@ -11,7 +11,7 @@ public class ConexionLogin {
     private static Statement statement;
     private static PreparedStatement preparedStatement;
 
-    public ConexionLogin() throws SQLException {
+    public ConexionAPP() throws SQLException {
         conectar();
     }
 
@@ -21,15 +21,15 @@ public class ConexionLogin {
         connection = DriverManager.getConnection(DB_URL, USER, PASS);
         statement = connection.createStatement();
     }
-    public ResultSet leerTabla() throws SQLException {
+    public ResultSet leerTablaPacientes() throws SQLException {
 
-        sql = "SELECT * FROM LOGINDATA";
+        sql = "SELECT * FROM PACIENTES";
         return statement.executeQuery(sql);
     }
-    public ResultSet buscarRegistroPorID(String id) throws SQLException {
 
-        sql = "SELECT * FROM LOGINDATA" +
-                " WHERE id = ?";
+    public ResultSet buscarPacientePorID(String id) throws SQLException {
+
+        sql = "SELECT * FROM PACIENTES WHERE id = ?";
         preparedStatement = connection.prepareStatement(sql);
         preparedStatement.setString(1, id);
         return preparedStatement.executeQuery();

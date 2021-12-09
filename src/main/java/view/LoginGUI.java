@@ -5,7 +5,6 @@
 package view;
 
 import service.Access;
-import service.Gestor;
 
 import java.awt.*;
 import javax.swing.*;
@@ -23,8 +22,8 @@ public class LoginGUI extends JFrame {
             e.printStackTrace();
         }
         initComponents();
-        okButton.addActionListener(e -> verificate());
-        button1.addActionListener(e -> runRegister());
+//        okButton.addActionListener(e -> verificate());
+//        button1.addActionListener(e -> runRegister());
     }
     public static void runRegister(){
         javax.swing.SwingUtilities.invokeLater(new Runnable() {
@@ -43,27 +42,27 @@ public class LoginGUI extends JFrame {
        });
    }
 
-    private void verificate() {
-        if(loginRut.getText()!=null&&loginPass.getText()!=null&&!loginRut.getText().equals("")&&!loginPass.getText().equals("")){
-            var acceso= Access.isValid(loginRut.getText(), loginPass.getText());
-            Gestor.setAccessGranted(acceso);
-            var nivel= Access.getAccessLevel();
-            if (Gestor.isAccessGranted()&&nivel==0) {
-                runApp();
-                dispose();
-            }else if (Gestor.isAccessGranted()&&nivel==2){
-                runAdmin();
-                dispose();
-
-            }else if(!new Access().isValid(loginRut.getText(), loginPass.getText())){
-                label4.setText("Contraseña Incorrecta");
-            }
-        }else if(loginRut.getText()==null||loginRut.getText().equals("")) {
-            label4.setText("Ingrese Usuario");
-        }else if(loginPass.getText()==null||loginPass.getText().equals("")) {
-            label4.setText("Ingrese Contraseña");
-        }
-    }
+//    private void verificate() {
+//        if(loginRut.getText()!=null&&loginPass.getText()!=null&&!loginRut.getText().equals("")&&!loginPass.getText().equals("")){
+//            var acceso= Access.isValid(loginRut.getText(), loginPass.getText());
+//            Gestor.setAccessGranted(acceso);
+//            var nivel= Access.getAccessLevel();
+//            if (Gestor.isAccessGranted()&&nivel==0) {
+//                runApp();
+//                dispose();
+//            }else if (Gestor.isAccessGranted()&&nivel==2){
+//                runAdmin();
+//                dispose();
+//
+//            }else if(!new Access().isValid(loginRut.getText(), loginPass.getText())){
+//                label4.setText("Contraseña Incorrecta");
+//            }
+//        }else if(loginRut.getText()==null||loginRut.getText().equals("")) {
+//            label4.setText("Ingrese Usuario");
+//        }else if(loginPass.getText()==null||loginPass.getText().equals("")) {
+//            label4.setText("Ingrese Contraseña");
+//        }
+//    }
 
     private void runAdmin() {
         javax.swing.SwingUtilities.invokeLater(new Runnable() {

@@ -1,20 +1,16 @@
 package Data;
 
-import java.sql.ResultSet;
+import service.ServicioAPP;
+
 import java.sql.SQLException;
 
 public class PRUEBA {
     public static void main(String[] args) throws SQLException {
-        var conexion=new ConexionLogin();
-        leerResultados(conexion.buscarRegistroPorID("CG14O7MV"));
-    }
-    public static void leerResultados(ResultSet resultados) throws SQLException {
-
-        System.out.println("""
-                      
-                """
-        );
-
-        resultados.close();
+        ServicioAPP.iniciar();
+        var conexion = new ConexionAPP();
+        var result = conexion.buscarPacientePorID("60OFBQ4T");
+        ServicioAPP.leerResultados(result);
+        System.out.println();
     }
 }
+

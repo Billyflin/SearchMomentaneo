@@ -4,7 +4,6 @@
 
 package view;
 
-import service.Gestor;
 import service.IDgen;
 
 import java.awt.*;
@@ -18,17 +17,17 @@ import javax.swing.border.*;
 public class AdminGui extends JFrame {
     public AdminGui() {
         initComponents();
-        fillComponents();
+//        fillComponents();
         button1.addActionListener(e -> label4.setText(IDgen.newID(5)));
     }
-
-    private void fillComponents() {
-        for (String s: Gestor.getEspecialidades()
-             ) {
-
-            comboBoxEspecialidades.addItem(s);
-        }
-    }
+//
+//    private void fillComponents() {
+//        for (String s: Gestor.getEspecialidades()
+//             ) {
+//
+//            comboBoxEspecialidades.addItem(s);
+//        }
+//    }
 
     private void initComponents() {
         // JFormDesigner - Component initialization - DO NOT MODIFY  //GEN-BEGIN:initComponents

@@ -6,34 +6,41 @@ import java.time.LocalDateTime;
 import java.time.format.DateTimeFormatter;
 
 public class Paciente {
-        public DateTimeFormatter formato = DateTimeFormatter.ofPattern("dd/MM/yyyy");
+        public DateTimeFormatter formato = DateTimeFormatter.ofPattern("yyyy/MM/dd");
         private final String ID;
-        private String nombre;
-        private String apellido;
-        private String rut;
-        private boolean rutValido;
-        private LocalDate fechaDeCreacionUsuario;
-        private boolean isapre;
-        private boolean fonasa;
+        private final String rut;
+        private final String nombre;
+        private final String apellido;
+        private final int edad;
+        private final LocalDate fechaDeNacimiento;
+        private final String correo;
+        private final String numero;
+        private final LocalDate fechaDeCreacionUsuario;
+        private final boolean isapre;
+        private final boolean fonasa;
 
-
-        public Paciente(String id, String nombre, String apellido, String rut,String rutValido, String fechaDeCreacionUsuario,String isapre,String fonasa) {
-                this.ID = id;
+        public Paciente(String ID, String rut, String nombre, String apellido, int edad, String fechaDeNacimiento, String correo, String numero, String fechaDeCreacionUsuario, boolean isapre, boolean fonasa) {
+                this.ID = ID;
+                this.rut = rut;
                 this.nombre = nombre;
                 this.apellido = apellido;
-                this.rut = rut;
-                this.rutValido = Boolean.parseBoolean(rutValido);
-                this.fechaDeCreacionUsuario = LocalDate.parse(fechaDeCreacionUsuario,formato);
-                this.isapre= Boolean.parseBoolean(isapre);
-                this.fonasa= Boolean.parseBoolean(fonasa);
+                this.edad = edad;
+                this.fechaDeNacimiento = LocalDate.parse(fechaDeNacimiento);
+                this.correo = correo;
+                this.numero = numero;
+                this.fechaDeCreacionUsuario = LocalDate.parse(fechaDeCreacionUsuario);
+                this.isapre = isapre;
+                this.fonasa = fonasa;
         }
 
+        public String getID() {
+                return ID;
+        }
 
+        public String getRut() {
+                return rut;
+        }
 
-        /**
-         *
-         * @return String
-         */
         public String getNombre() {
                 return nombre;
         }
@@ -42,24 +49,47 @@ public class Paciente {
                 return apellido;
         }
 
-        public String getRut() {
-                return rut;
+        public int getEdad() {
+                return edad;
         }
 
-        public boolean isRutValido() {
-                return rutValido;
+        public LocalDate getFechaDeNacimiento() {
+                return fechaDeNacimiento;
+        }
+
+        public String getCorreo() {
+                return correo;
+        }
+
+        public String getNumero() {
+                return numero;
         }
 
         public LocalDate getFechaDeCreacionUsuario() {
-                return LocalDate.from(fechaDeCreacionUsuario);
+                return fechaDeCreacionUsuario;
         }
 
-        public String getID() {
-                return ID;
+        public boolean isIsapre() {
+                return isapre;
+        }
+
+        public boolean isFonasa() {
+                return fonasa;
         }
 
         @Override
         public String toString() {
-                return  ID +","+ nombre + ","+ apellido +"," +rut + ","+rutValido  +","+ fechaDeCreacionUsuario +","+ isapre  +","+ fonasa +"\n";
+                return
+                        "ID='" + ID + '\'' +
+                        ", rut='" + rut + '\'' +
+                        ", nombre='" + nombre + '\'' +
+                        ", apellido='" + apellido + '\'' +
+                        ", edad=" + edad +
+                        ", fechaDeNacimiento=" + fechaDeNacimiento +
+                        ", correo='" + correo + '\'' +
+                        ", numero='" + numero + '\'' +
+                        ", fechaDeCreacionUsuario=" + fechaDeCreacionUsuario +
+                        ", isapre=" + isapre +
+                        ", fonasa=" + fonasa +"\n";
         }
 }

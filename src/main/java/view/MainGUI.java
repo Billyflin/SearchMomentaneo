@@ -7,15 +7,11 @@ package view;
 import model.Especialista;
 import org.jdesktop.swingx.*;
 import org.jdesktop.swingx.JXDatePicker;
-import service.Gestor;
 
 import java.awt.*;
 import java.awt.image.BufferedImage;
 import java.io.File;
 import java.io.IOException;
-import java.text.SimpleDateFormat;
-import java.util.Calendar;
-import java.util.Objects;
 import javax.imageio.ImageIO;
 import javax.swing.*;
 import javax.swing.GroupLayout;
@@ -32,27 +28,27 @@ public class MainGUI extends JFrame {
             e.printStackTrace();
         }
         initComponents();
-        pantalla3();
-        pantalla4();
+//        pantalla3();
+//        pantalla4();
     }
 
-    private void pantalla4() {
-        BufferedImage img = null;
-        try {
-            img = ImageIO.read(new File("src/main/resources/anime_girl_PNG52.png"));
-        } catch (IOException e) {
-        }
-        xImagePanel1.setImage(img);
-        repaint();
-    }
-
-    private void pantalla3() {
-        for (Especialista e: Gestor.getEspecilistas()
-             ) {
-            comboBox1.addItem(e.getEspecialidad());
-
-        }
-    }
+//    private void pantalla4() {
+//        BufferedImage img = null;
+//        try {
+//            img = ImageIO.read(new File("src/main/resources/anime_girl_PNG52.png"));
+//        } catch (IOException e) {
+//        }
+//        xImagePanel1.setImage(img);
+//        repaint();
+//    }
+//
+//    private void pantalla3() {
+//        for (Especialista e: Gestor.getEspecilistas()
+//             ) {
+//            comboBox1.addItem(e.getEspecialidad());
+//
+//        }
+//    }
 
     private void initComponents() {
         // JFormDesigner - Component initialization - DO NOT MODIFY  //GEN-BEGIN:initComponents

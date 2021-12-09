@@ -9,43 +9,61 @@ import java.util.ArrayList;
 import java.util.Scanner;
 
 public class Especialista {
-    private int id;
-    private String nombre;
-    private String especialidad;
-    private boolean fonasa;
-    private boolean isapre;
+    private final int id;
+    private final String rut;
+    private final String nombre;
+    private final String apellido;
+    private final String area;
+    private final String especialidad;
+    private final boolean isapre;
+    private final boolean fonasa;
+    private final String direccion;
 
-    public Especialista(int id, String nombre, String especialidad, boolean fonasa, boolean isapre) {
+    public Especialista(int id, String rut, String nombre, String apellido, String area, String especialidad, boolean isapre, boolean fonasa, String direccion) {
         this.id = id;
+        this.rut = rut;
         this.nombre = nombre;
+        this.apellido = apellido;
+        this.area = area;
         this.especialidad = especialidad;
-        this.fonasa = fonasa;
         this.isapre = isapre;
+        this.fonasa = fonasa;
+        this.direccion = direccion;
     }
-
 
     public int getId() {
         return id;
+    }
+
+    public String getRut() {
+        return rut;
     }
 
     public String getNombre() {
         return nombre;
     }
 
-    public String getEspecialidad() {
-        return especialidad;
+    public String getApellido() {
+        return apellido;
     }
 
-    public boolean isFonasa() {
-        return fonasa;
+    public String getArea() {
+        return area;
+    }
+
+    public String getEspecialidad() {
+        return especialidad;
     }
 
     public boolean isIsapre() {
         return isapre;
     }
 
-    @Override
-    public String toString() {
-        return id +","+nombre +","+especialidad +","+fonasa+","+isapre;
+    public boolean isFonasa() {
+        return fonasa;
+    }
+
+    public String getDireccion() {
+        return direccion;
     }
 }

@@ -5,7 +5,6 @@
 package view;
 
 import service.Access;
-import service.Gestor;
 
 import java.awt.*;
 import javax.swing.*;
@@ -23,26 +22,26 @@ public class RegisterGUI extends JFrame {
             e.printStackTrace();
         }
         initComponents();
-        button1.addActionListener(e -> register());
+//        button1.addActionListener(e -> register());
     }
-    private void register() {
-        label3.setText("");
-        if(textField1.getText()!=null&&textField2.getText()!=null&& !textField1.getText().equals("") && !textField2.getText().equals("")){
-            boolean registro=new Access().registerisValid(textField1.getText());
-            System.out.println(registro);
-            if(registro){
-                Gestor.registerUser(textField1.getText(), textField2.getText());
-                JOptionPane.showMessageDialog(null,"registrado");
-                dispose();
-            }
-        }else if(textField1.getText()==null||textField1.getText().equals("")) {
-            label3.setText("Ingrese Usuario");
-        }else if(textField2.getText()==null||textField2.getText().equals("")) {
-            label3.setText("Ingrese Contraseña");
-        }else if (!new Access().registerisValid(textField1.getText())) {
-            label3.setText("Usuario existente");
-        }
-    }
+//    private void register() {
+//        label3.setText("");
+//        if(textField1.getText()!=null&&textField2.getText()!=null&& !textField1.getText().equals("") && !textField2.getText().equals("")){
+//            boolean registro=new Access().registerisValid(textField1.getText());
+//            System.out.println(registro);
+//            if(registro){
+//                Gestor.registerUser(textField1.getText(), textField2.getText());
+//                JOptionPane.showMessageDialog(null,"registrado");
+//                dispose();
+//            }
+//        }else if(textField1.getText()==null||textField1.getText().equals("")) {
+//            label3.setText("Ingrese Usuario");
+//        }else if(textField2.getText()==null||textField2.getText().equals("")) {
+//            label3.setText("Ingrese Contraseña");
+//        }else if (!new Access().registerisValid(textField1.getText())) {
+//            label3.setText("Usuario existente");
+//        }
+//    }
 
 
     private void initComponents() {
